@@ -98,5 +98,12 @@ body {
         color:rgb(210, 134, 34)
     }
 
+    @media screen (min-width 768px) {
+        [class*="body"] {
+            width: 100%;
+        }
+        
+    }
+
 
 
