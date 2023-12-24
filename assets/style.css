@@ -1,10 +1,12 @@
-@font-face {
-    font-family:'fancy';
-    src: url(assets/fonts/Southam Demo.otf);
+:root {
+    --brown: brown;
+    --tan: burlywood;
+    --sc: black;
+    --ssd: .2rem .2rem .5rem;
 }
 
 body {
-   background-color:rgb(208, 164, 107);
+   background-color:var(--tan);
    font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -12,11 +14,11 @@ body {
 
 .navlist {
     background-color: brown;
-    box-shadow: 0px 0px 10px;
+    box-shadow: var(--ssd);
     margin-top: 0;
-    border-radius: 10px;
+    border-radius: 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: start;
     align-items: center;
     
     
@@ -24,86 +26,96 @@ body {
 
 .navitem {
     list-style: none;
-    line-height: 10px;
-    width: 150px;
+    line-height: 5rem;
+    width: 15rem;
     text-align: center;
    
 }
 
 .navitem a {
-    font-size: 30px;
+    font-size: 1rem;
     font-style: bold;
-    text-shadow: 3px 3px 8px rgb(0, 0, 0) ;
+    text-shadow: var(--ssd) var(--sc) ;
     text-decoration: none;
-    color:rgb(208, 164, 107) ;
+    color:var(--tan);
 
 }
 
-.navitem:first-child {
-    margin-right: auto;
-    
-    
-}
+
 
 .navitem:hover {
     background-color:burlywood ;
-    box-shadow: 0 0 10px;
-    border-radius: 5px;
-    line-height: 90px;
+    box-shadow: var(--ssd);
+    border-radius: 1rem;
+    line-height: 4.9rem;
     
 }
 
 .navitem a:hover {
-    color: brown;
-    text-shadow:3px 3px 8px
+    color: var(--brown);
+    text-shadow:var(--ssd) var(--sc);
 }
 
-.navitem:first-child:hover {
-    background-color: brown;
-    box-shadow: none;
-    line-height: 10px;
-}
 
 .greeting {
-    background-color: brown;
-    border-radius: 10px;
-    font-size: 100px;
+    background-color: var(--brown);
+    border-radius: 1rem;
+    font-size: 1rem;
     color: burlywood;
-    text-shadow: 2px 2px 10px black;
+    text-shadow: var(--ssd) var(--sc);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: .2rem;
    
     
     
     }
 
     h1{
-    
+    font-size: 3rem;
         
     }
 
     h2{
-        font-size: xx-large;
+        font-size: 1.5rem;
+        text-align: center;
         
     }
 
     p {
-        font-size: 25px;
+        font-size: 1rem;
         text-align: center;
     }
 
     span {
         color:rgb(210, 134, 34)
     }
-
-    @media screen (min-width 768px) {
-        [class*="body"] {
-            width: 100%;
+    @media (min-width: 400px) {
+        .navitem a{
+            font-size: 150%;
         }
-        
-    }
+        .greeting h1 {
+          font-size: 500%;
+        }
+      }
 
-
-
+    @media (min-width: 400px) {
+        .greeting h2, p{
+          font-size: 120%;
+        }
+      }
+    
+    @media (min-width: 700px) {
+        .navitem a{
+            font-size: 300%;
+        }
+        .greeting h1{
+          font-size: 1000%;
+        }
+      }
+    @media (min-width: 700px) {
+        .greeting h2, p{
+          font-size: 200%;
+        }
+      }
