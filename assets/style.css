@@ -2,23 +2,84 @@
     --brown: brown;
     --tan: burlywood;
     --sc: black;
-    --ssd: .2rem .2rem .5rem;
+    --ssd: .2rem .2rem .5rem black;
 }
-
+/*MAIN CONTENT*/
 body {
-   background-color:var(--tan);
-   font-family: Arial, Helvetica, sans-serif;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color:var(--tan);
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: .5em .5em 1em black;
 
+}
+section{
+ color: var(--tan);
+ background-color: var(--brown);
+ border-radius: 1em;
+ box-shadow: var(--ssd);
+ margin-top: 1em;
+ padding: .5em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+img{
+  width: 20em;
+ height: 20em;
+ border-radius: 60%;
+ object-fit: cover;
+}
+.content{
+  display: flex;
+}
+
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  margin: 1em;
+  padding: 2em;
+}
+
+.about-list {
+text-align: left;
+}
+.img-container {
+   background-color: var(--tan);
+  width: 20em;
+  height: 20em;
+  border-radius: 60%;
+  overflow: hidden;
+  }
+.text-container{
+  width: 70em;
+  box-shadow: none;
 }
 
 
+
+/*END MAIN CONTENT*/
+/*------------------------------------------------*/
+/* NAVIGATION BAR*/
 .navlist {
-    background-color: brown;
+    background-color:var(--brown) ;
     box-shadow: var(--ssd);
-    margin-top: 0;
     border-radius: 1rem;
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     
     
@@ -35,13 +96,10 @@ body {
 .navitem a {
     font-size: 1rem;
     font-style: bold;
-    text-shadow: var(--ssd) var(--sc) ;
     text-decoration: none;
     color:var(--tan);
 
 }
-
-
 
 .navitem:hover {
     background-color:burlywood ;
@@ -55,42 +113,11 @@ body {
     color: var(--brown);
     text-shadow:var(--ssd) var(--sc);
 }
+/*END NAVIGATION BAR*/
 
 
-.greeting {
-    background-color: var(--brown);
-    border-radius: 1rem;
-    font-size: 1rem;
-    color: burlywood;
-    text-shadow: var(--ssd) var(--sc);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: .2rem;
-   
-    
-    
-    }
 
-    h1{
-    font-size: 3rem;
-        
-    }
 
-    h2{
-        font-size: 1.5rem;
-        text-align: center;
-        
-    }
-
-    p {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    span {
-        color:rgb(210, 134, 34)
-    }
     @media (min-width: 400px) {
         .navitem a{
             font-size: 150%;
@@ -100,11 +127,6 @@ body {
         }
       }
 
-    @media (min-width: 400px) {
-        .greeting h2, p{
-          font-size: 120%;
-        }
-      }
     
     @media (min-width: 700px) {
         .navitem a{
@@ -114,8 +136,4 @@ body {
           font-size: 1000%;
         }
       }
-    @media (min-width: 700px) {
-        .greeting h2, p{
-          font-size: 200%;
-        }
-      }
+   
