@@ -3,6 +3,7 @@
     --tan: burlywood;
     --sc: black;
     --ssd: .2rem .2rem .5rem black;
+    --mt: 15px;
 }
 /*MAIN CONTENT*/
 body {
@@ -12,7 +13,7 @@ body {
   text-align: center;
   background-color:var(--tan);
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: .5em .5em 1em black;
+  text-shadow: .5em .5em 1em var(--sc);
 
 }
 section{
@@ -20,7 +21,7 @@ section{
  background-color: var(--brown);
  border-radius: 1em;
  box-shadow: var(--ssd);
- margin-top: 1em;
+ margin-top:var(--mt);
  padding: .5em;
 }
 
@@ -30,14 +31,24 @@ h1 {
 
 h2{
   font-size: 5vw;
+
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+a {
+  text-decoration: none;
+  color: var(--tan)
 }
 
 p {
   font-size: 2.5vw;
 }
 
-img{
-  width: 30vw;
+.me{
+ width: 30vw;
  height: 30vw;
  border-radius: 60%;
  object-fit: cover;
@@ -50,7 +61,7 @@ img{
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around;
-  margin: 0vw;
+  margin-top: var(--mt);
   padding: 0vw;
 }
 
@@ -68,6 +79,32 @@ text-align: left;
   width: 60vw;
   box-shadow: none;
 }
+.pwsg {
+  margin-top: 1vw;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pwsg-cont {
+box-shadow: .5vw 0.5vw 2vw var(--sc);
+  background-color: var(--tan);
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.projects {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.yak {
+  width: 75vw;
+}
 
 
 
@@ -81,16 +118,19 @@ text-align: left;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0;
+    padding: 0;
     
     
 }
+
 
 .navitem {
     list-style: none;
     line-height: 5rem;
     width: 15rem;
     text-align: center;
-   
+    
 }
 
 .navitem a {
@@ -98,6 +138,7 @@ text-align: left;
     font-style: bold;
     text-decoration: none;
     color:var(--tan);
+   
 
 }
 
@@ -115,9 +156,9 @@ text-align: left;
 }
 /*END NAVIGATION BAR*/
 
+/*===============================================*/
 
-
-
+/*media queries*/
     @media (min-width: 400px) {
         .navitem a{
             font-size: 150%;
@@ -130,10 +171,10 @@ text-align: left;
     
     @media (min-width: 700px) {
         .navitem a{
-            font-size: 300%;
+            font-size: 200%;
         }
         .greeting h1{
-          font-size: 1000%;
+          font-size: 500%;
         }
       }
    
